@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('loginTotrello', (email, password) => {
+    cy.visit("/login")
+    cy.get("#email").type(email)
+    cy.get("#login-submit").click();
+    cy.get("#pass").type(password)
+    cy.get("#login-submit").click();
+})

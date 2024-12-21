@@ -6,5 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
     },
+    baseUrl: "https://trello.com/",
   },
+
 });
